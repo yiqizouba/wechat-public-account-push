@@ -33,7 +33,7 @@ const USER_CONFIG = {
         },
         // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
         {
-          type: '生日', name: '李四', year: '1996', date: '01-18',
+          type: '生日', name: '唐朝', year: '1997', date: '01-18',
         },
         {
           type: '节日', name: '相识纪念日', year: '2022', date: '08-06',
@@ -42,22 +42,55 @@ const USER_CONFIG = {
       // 我们在一起已经有xxxx天了的配置
       customizedDateList: [
         // 在一起的日子
-        { keyword: 'love_day', date: '2022-09-08' },
+        { keyword: 'love_day', date: '2022-08-06' },
+        // 结婚纪念日
+        { keyword: 'marry_day', date: '2022-09-09' },
+      ],
+    },
+  ],
+  
+  
+  USERS: [
+    {
+      // 想要发送的人的名字
+      name: '刘辉',
+      // 使用微信测试号：扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
+      id: 'otnc-5gKy6Npx9yJ-WjKpT5Jr9VI',
+      // 使用微信测试号：你想对他发送的模板消息的模板ID
+      useTemplateId: 'X9AMWVRW9BxEkxKouY1jfOypbdwcs77tw087shbpdUE',
+      // 新历生日, 仅用作获取星座运势, 格式必须为MM-DD
+      horoscopeDate: '11-07',
+      festivals: [
+        // 注意：此条配置日期为阴历日期，因为`type`中 “生日” 之前有 * 符号
+        {
+          type: '*生日', name: '刘辉', year: '1998', date: '09-19',
+        },
+        // 注意：此条配置日期为阳历日期，因为`type`中 “生日” 之前没有 * 符号
+        {
+          type: '生日', name: '刘辉', year: '1998', date: '11-07',
+        },
+        {
+          type: '节日', name: '相识纪念日', year: '2022', date: '08-06',
+        },
+      ],
+      // 我们在一起已经有xxxx天了的配置
+      customizedDateList: [
+        // 在一起的日子
+        { keyword: 'love_day', date: '2022-08-06' },
         // 结婚纪念日
         { keyword: 'marry_day', date: '2022-09-09' },
       ],
     },
   ],
 
-
   // 【推送完成提醒】模板id, 用来看自己有没有发送成功的那个模板
-  CALLBACK_TEMPLATE_ID: '',
+  CALLBACK_TEMPLATE_ID: 'WhVMmhiwaNBIoGIuXgPyH696YOX9pAG9qlj6h4XyfaE	',
 
   CALLBACK_USERS: [
     {
       name: '自己',
       // 使用微信测试号：自己的微信id，扫码关注你的微信测试号后生成的一段字符串，在测试号后台能看到
-      id: '',
+      id: 'otnc-5gKy6Npx9yJ-WjKpT5Jr9VI',
     }
   ],
 
